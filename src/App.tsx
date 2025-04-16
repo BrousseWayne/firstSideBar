@@ -35,6 +35,7 @@ const items = [
     icon: Settings,
   },
 ];
+
 function App() {
   return (
     <>
