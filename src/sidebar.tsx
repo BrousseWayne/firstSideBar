@@ -51,3 +51,5 @@ export const Sidebar = ({ children }: { children: ReactNode }) => {
 
 /* TODO: Fix responsive, when resizing window on y axis   */
 /* TODO: Fix responsive, icon are redimensioned  */
+/* TODO: Separate responsabilities */
+/* TODO: create tooltips on minified icons */
