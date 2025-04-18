@@ -9,16 +9,17 @@ body {
   background: #18181a;
   height: 100vh;
   border-right: 0.4px solid rgb(68, 66, 66);
-  transition: width 200ms ease-in-out;
+  transition: width 500ms ease-in-out;
   box-sizing: border-box;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .sidebar--expanded {
-  width: 30vh;
+  width: 30vw;
 }
 .sidebar--minified {
-  width: 5vh;
+  width: 5vw;
 }
 .sidebar--collapsed {
   width: 0;
@@ -38,7 +39,7 @@ body {
   display: flex;
   flex-direction: row;
   height: 100vh;
-  align-items: flex-start;
+  align-items: stretch;
 }
 
 .sidebarToggle {
