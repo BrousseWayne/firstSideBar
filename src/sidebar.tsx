@@ -31,11 +31,17 @@ export const SidebarToggle = () => {
   );
 };
 
-export const SidebarItem = ({ icon: Icon, text }: SidebarContentType) => {
+export const SidebarItem = ({ icon: Icon, text, url }: SidebarContentType) => {
   const { collapseState } = useSidebarContext();
+  const showTooltips = collapseState === "minified";
+
   return (
     <li className="sidebarItem">
-      <a href="#">
+      <a
+        href={url && url}
+        className={showTooltips ? "hasTooltip" : ""}
+        data-tooltip={text}
+      >
         {Icon && <Icon />}
         {collapseState === "expanded" ? <span>{text}</span> : null}
       </a>
@@ -45,6 +51,10 @@ export const SidebarItem = ({ icon: Icon, text }: SidebarContentType) => {
 
 export const Sidebar = ({ children }: { children: ReactNode }) => {
   const { collapseState } = useSidebarContext();
+
+  if (collapseState === "collapsed") {
+    return null;
+  }
 
   return <div className={`sidebar sidebar--${collapseState}`}>{children}</div>;
 };

@@ -11,7 +11,7 @@ import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
 const items = [
   {
     title: "Home",
-    url: "#",
+    url: "#ddd",
     icon: Home,
   },
   {
@@ -44,7 +44,12 @@ function App() {
           <Sidebar>
             <SidebarGroupContent>
               {items.map((value, index) => (
-                <SidebarItem text={value.title} icon={value.icon} key={index} />
+                <SidebarItem
+                  text={value.title}
+                  icon={value.icon}
+                  key={index}
+                  url={value.url}
+                />
               ))}
             </SidebarGroupContent>
           </Sidebar>
