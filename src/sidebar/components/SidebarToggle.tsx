@@ -1,5 +1,5 @@
 import { PanelRightClose, PanelRightOpen } from "lucide-react";
-import { useSidebarContext } from "./SidebarProvider";
+import { useSidebarContext } from "../hooks/useSidebarContext";
 
 export const SidebarToggle = () => {
   const { cycleCollapseState, collapseState } = useSidebarContext();

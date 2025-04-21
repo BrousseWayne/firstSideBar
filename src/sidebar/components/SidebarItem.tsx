@@ -1,5 +1,5 @@
-import { useSidebarContext } from "./SidebarProvider";
-import { SidebarItemType } from "./types";
+import { useSidebarContext } from "../hooks/useSidebarContext";
+import { SidebarItemType } from "../types/types";
 
 export const SidebarItem = ({ icon: Icon, text, url }: SidebarItemType) => {
   const { collapseState } = useSidebarContext();

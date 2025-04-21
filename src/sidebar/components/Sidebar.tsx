@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import "./sidebar.css";
-import { useSidebarContext } from "./SidebarProvider";
+import { useSidebarContext } from "../hooks/useSidebarContext";
 
 export const Sidebar = ({ children }: { children: ReactNode }) => {
   const { collapseState } = useSidebarContext();

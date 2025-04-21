@@ -1,10 +1,10 @@
 import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
-import { SidebarLayout } from "./components/sidebar/SidebarLayout";
-import { Sidebar } from "./components/sidebar/Sidebar";
-import { SidebarGroupContent } from "./components/sidebar/SidebarGroup";
-import { SidebarItem } from "./components/sidebar/SidebarItem";
-import { SidebarToggle } from "./components/sidebar/SidebarToggle";
-import { SidebarProvider } from "./components/sidebar/SidebarProvider";
+import { SidebarLayout } from "./sidebar/components/SidebarLayout";
+import { Sidebar } from "./sidebar/components/Sidebar";
+import { SidebarGroupContent } from "./sidebar/components/SidebarGroup";
+import { SidebarItem } from "./sidebar/components/SidebarItem";
+import { SidebarToggle } from "./sidebar/components/SidebarToggle";
+import { SidebarProvider } from "./sidebar/context/SidebarProvider";
 
 const items = [
   {

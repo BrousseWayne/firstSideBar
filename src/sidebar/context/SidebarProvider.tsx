@@ -1,21 +1,14 @@
-import { createContext, ReactNode, useContext, useState } from "react";
-import { CollapseLevel } from "./types";
+import { createContext, ReactNode, useState } from "react";
+import { CollapseLevel } from "../types/types";
 
 type SidebarContextType = {
   collapseState: CollapseLevel;
   cycleCollapseState: () => void;
 };
 
-const SidebarContext = createContext<SidebarContextType | undefined>(undefined);
-
-export const useSidebarContext = () => {
-  const context = useContext(SidebarContext);
-  if (!context) {
-    throw new Error("useSidebar should not be used outside a Sidebar.");
-  }
-
-  return context;
-};
+export const SidebarContext = createContext<SidebarContextType | undefined>(
+  undefined
+);
 
 export const SidebarProvider = ({ children }: { children: ReactNode }) => {
   const [collapseState, setCollapseState] = useState<CollapseLevel>("expanded");
