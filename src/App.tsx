@@ -1,12 +1,10 @@
-import {
-  Sidebar,
-  SidebarGroupContent,
-  SidebarItem,
-  SidebarLayout,
-  SidebarToggle,
-} from "./sidebar";
-import { SidebarProvider } from "./sidebarProvider";
 import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
+import { SidebarLayout } from "./components/sidebar/SidebarLayout";
+import { Sidebar } from "./components/sidebar/Sidebar";
+import { SidebarGroupContent } from "./components/sidebar/SidebarGroup";
+import { SidebarItem } from "./components/sidebar/SidebarItem";
+import { SidebarToggle } from "./components/sidebar/SidebarToggle";
+import { SidebarProvider } from "./components/sidebar/SidebarProvider";
 
 const items = [
   {

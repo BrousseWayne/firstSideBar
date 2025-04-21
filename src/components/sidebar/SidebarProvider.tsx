@@ -1,6 +1,5 @@
 import { createContext, ReactNode, useContext, useState } from "react";
-
-type CollapseLevel = "expanded" | "minified" | "collapsed";
+import { CollapseLevel } from "./types";
 
 type SidebarContextType = {
   collapseState: CollapseLevel;
